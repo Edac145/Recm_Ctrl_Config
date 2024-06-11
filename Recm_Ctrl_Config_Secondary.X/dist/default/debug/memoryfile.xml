@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/debug/Recm_Ctrl_Config_Secondary.X.debug.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>16384</length>
+      <used>268</used>
+      <free>16116</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>72960</length>
+      <used>12894</used>
+      <free>60066</free>
+    </memory>
+  </executable>
+</project>

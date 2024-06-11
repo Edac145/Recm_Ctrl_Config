@@ -1,0 +1,149 @@
+{
+    "packageName": "Secondary Core",
+    "packageVersion": "1.2.0",
+    "mainDevice": "dsPIC33CH512MP508",
+    "secondaryCoreNumber": "1",
+    "secondaryCoreConfigurations": {
+        "MSI": {
+            "MailboxConfiguration": [
+                {
+                    "RowId": 0,
+                    "Enable": true,
+                    "Protocol": "Protocol A",
+                    "CustomName": "MSI1_ProtocolA",
+                    "BufferSize": "4",
+                    "Direction": "M->S",
+                    "Interrupt": true
+                },
+                {
+                    "RowId": 1,
+                    "Enable": true,
+                    "Protocol": "Protocol B",
+                    "CustomName": "MSI1_ProtocolB",
+                    "BufferSize": "4",
+                    "Direction": "S->M",
+                    "Interrupt": true
+                }
+            ],
+            "BufferUsed": "8",
+            "AvailableBuffer": "24",
+            "ResetConfiguration": {
+                "ResetSecondaryCoreOnMainCoreReset": true,
+                "DisableSecondaryCoreOnSecondaryCoreReset": false
+            }
+        },
+        "Pins": {
+            "PORTE": {
+                "RE0": "Secondary Core1",
+                "RE1": "Secondary Core1",
+                "RE2": "Secondary Core1",
+                "RE3": "Secondary Core1",
+                "RE4": "Secondary Core1",
+                "RE5": "Secondary Core1",
+                "RE6": "Secondary Core1",
+                "RE7": "Secondary Core1",
+                "RE8": "Secondary Core1",
+                "RE9": "Secondary Core1",
+                "RE10": "Secondary Core1",
+                "RE11": "Secondary Core1",
+                "RE12": "Secondary Core1",
+                "RE13": "Secondary Core1",
+                "RE14": "Secondary Core1",
+                "RE15": "Secondary Core1"
+            },
+            "PORTA": {
+                "RA0": "Main Core",
+                "RA1": "Secondary Core1",
+                "RA2": "Secondary Core1",
+                "RA3": "Secondary Core1",
+                "RA4": "Main Core"
+            },
+            "PORTB": {
+                "RB0": "Secondary Core1",
+                "RB1": "Secondary Core1",
+                "RB2": "Secondary Core1",
+                "RB3": "Secondary Core1",
+                "RB4": "Secondary Core1",
+                "RB5": "Secondary Core1",
+                "RB6": "Main Core",
+                "RB7": "Main Core",
+                "RB8": "Main Core",
+                "RB9": "Main Core",
+                "RB10": "Secondary Core1",
+                "RB11": "Main Core",
+                "RB12": "Main Core",
+                "RB13": "Main Core",
+                "RB14": "Main Core",
+                "RB15": "Main Core"
+            },
+            "PORTC": {
+                "RC0": "Main Core",
+                "RC1": "Main Core",
+                "RC2": "Main Core",
+                "RC3": "Secondary Core1",
+                "RC4": "Main Core",
+                "RC5": "Main Core",
+                "RC6": "Main Core",
+                "RC7": "Main Core",
+                "RC8": "Main Core",
+                "RC9": "Main Core",
+                "RC10": "Main Core",
+                "RC11": "Main Core",
+                "RC12": "Main Core",
+                "RC13": "Main Core",
+                "RC14": "Main Core",
+                "RC15": "Main Core"
+            },
+            "PORTD": {
+                "RD0": "Main Core",
+                "RD1": "Main Core",
+                "RD2": "Secondary Core1",
+                "RD3": "Secondary Core1",
+                "RD4": "Secondary Core1",
+                "RD5": "Secondary Core1",
+                "RD6": "Secondary Core1",
+                "RD7": "Main Core",
+                "RD8": "Main Core",
+                "RD9": "Main Core",
+                "RD10": "Main Core",
+                "RD11": "Main Core",
+                "RD12": "Main Core",
+                "RD13": "Main Core",
+                "RD14": "Main Core",
+                "RD15": "Main Core"
+            }
+        },
+        "Clock": {
+            "ClockSource": "FRC Oscillator",
+            "EnableClockSwitching": false,
+            "EnableFailSafeMonitor": false
+        },
+        "WatchdogTimer": {
+            "EnableType": "Software",
+            "ClockSource": "LPRC",
+            "Mode": "Non-Window mode",
+            "WindowWidth": "25",
+            "TimerPostscaler": "1:1048576"
+        },
+        "DMT": {
+            "EnableType": "Software",
+            "FetchCounter": "0x0",
+            "WindowInterval": "0x0"
+        },
+        "ICD": {
+            "EmulatorPinPlacement": "Communicate on PGC1 and PGD1"
+        },
+        "I2C": {
+            "AlternateI2C1PinMapping": "I2C1 mapped to SDA1/SCL1 pins"
+        },
+        "SPI": {
+            "SPI1PinMapping": "Secondary SPI1 uses I/O remap (PPS) pins"
+        },
+        "ContextInterrupts": {
+            "S1CTXT1": "OFF",
+            "S1CTXT2": "OFF",
+            "S1CTXT3": "OFF",
+            "S1CTXT4": "OFF"
+        }
+    }
+}
